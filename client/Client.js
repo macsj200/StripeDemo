@@ -1,16 +1,11 @@
 Template.purchaseCat.events({
     'submit form':function(event){
-        clientCreateCustomer(event);
+        createCustomer(event);
 
         return false;
     },
     'click .purchase':function(event){
-        handlePurchase(event);
-
-        if(Session.get('charge').status === "succeeded"){
-
-        }
-
+        createCharge(event);
         return false;
     }
 });
