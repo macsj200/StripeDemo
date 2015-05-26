@@ -1,20 +1,10 @@
-Template.purchaseCat.events({
-    'submit form':function(event){
-        createCustomer(event);
+successFunction = function(){
+    var item = Session.get('item');
 
-        return false;
-    },
-    'click .purchase':function(event){
-        createCharge(event);
-        return false;
-    }
-});
+    Cats.update(item._id, {$set: {purchased: true, ownerId: item.ownerId}});
 
-Template.purchaseCat.helpers({
-    charge:function(){
-        return Session.get('charge');
-    }
-});
+    Session.set('charge', {status:"n/a"})
+};
 
 Template.listCats.helpers({
     cats:function(){

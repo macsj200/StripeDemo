@@ -20,5 +20,11 @@ Cats.attachSchema(new SimpleSchema({
   },
   image:{
     type:String
+  },
+  purchased:{
+    type:Boolean
+  },
+  ownerId:{
+    type:String
   }
 }));
