@@ -10,4 +10,11 @@ Template.listCats.helpers({
     cats:function(){
         return Cats.find({});
     }
+
+});
+
+Template.cat.helpers({
+    catId:function(){
+        return this._id + '';
+    }
 });

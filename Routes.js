@@ -8,7 +8,7 @@ Router.map(function(){
 });
 
 Router.route('/cats/:_id', function () {
-    var cat = Cats.findOne({_id: this.params._id});
+    var cat = Cats.findOne(this.params._id);
     Session.set('item', cat);
     this.render('purchaseCat', {data: cat});
 });

@@ -7,3 +7,9 @@
 meteor-platform
 autopublish
 insecure
+aldeed:simple-schema
+aldeed:collection2
+iron:router
+accounts-ui
+accounts-password
+maxjohansen:simplestripe
